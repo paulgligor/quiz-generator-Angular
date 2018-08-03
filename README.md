@@ -29,9 +29,6 @@ And a random question should be displayed
 And the 'show answer' button should be displayed
 And the 'show next question' button should be displayed
 
-****************************************************************
-Open the folder in Visual Studio Code, run "npm install restore" from the integrated terminal and then "ng serve --open".
-
 As a quiz taker
 Given I am on the Take Quiz page
 When I click on the 'show answer' button
@@ -41,3 +38,6 @@ As a quiz taker
 Given I am on the Take Quiz page
 When I click on the 'show next question' button
 Then another question should be shown at random
+
+****************************************************************
+Open the folder in Visual Studio Code, run "npm install restore" from the integrated terminal and then "ng serve --open".
