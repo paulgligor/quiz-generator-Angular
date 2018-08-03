@@ -1,0 +1,24 @@
+  <div class="container">
+      <form>  
+        <div style="text-align:center">
+          <h1>
+            {{ pageTitle }}!
+          </h1>
+          <div class='row'>
+            <div class='col-md-4'>
+                <input type='text' [(ngModel)]='question.question' name="question"/>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class='row'>
+          <div class='col-md-4' [hidden]="isAnswerHidden">
+              <input type='text' [(ngModel)]='question.answer'  name="answer"/>
+        </div>
+        <div class="divider"></div>
+      </div>
+      <input type="button" value="Next Question" (click)="getNextQuestion()"/>
+      <div class="divider"></div>
+      <input type="button" value="Show Answer" (click)="revealAnswerQuestion()"/>
+        </div>
+      </form>
+      </div>

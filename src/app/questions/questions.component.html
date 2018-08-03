@@ -1,0 +1,32 @@
+<div class="container">
+<form (ngSubmit)="saveQuestion()">  
+  <div style="text-align:center">
+    <h1>
+      {{ pageTitle }}!
+    </h1>
+    <div class='row'>
+      <div class='col-md-4'>
+          <div class='col-md-2'>
+            Question:
+        </div>
+        <div class='col-md-2'>
+            <input type='text' [(ngModel)]='question.question' name="question"/>
+          </div>
+      </div>
+  </div>
+  <div class="divider"></div>
+  <div class='row'>
+    <div class='col-md-4'>
+        <div class='col-md-2'>
+          Answer:
+    </div>
+    <div class='col-md-2'>
+    <input type='text' [(ngModel)]='question.answer'  name="answer"/>
+</div>
+  </div>
+  <div class="divider"></div>
+</div>
+    <input type="submit" value="Submit"/>
+  </div>
+</form>
+</div>
