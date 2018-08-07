@@ -6,17 +6,16 @@ import { IQuestion } from './Question';
   templateUrl: './questions.component.html',
   styleUrls: ['./questions.component.css']
 })
-
 export class QuestionsComponent implements OnInit {
   question: IQuestion;
-  pageTitle: string = "Add Question";
+  pageTitle: string = 'Add Question';
 
-  constructor(private _questionsService: QuestionsService) { }
+  constructor(private _questionsService: QuestionsService) {}
 
-  saveQuestion(): void{
+  saveQuestion(): void {
     this._questionsService.addQuestion(this.question);
     this.question = this._questionsService.resetQuestion();
-    alert("Questions successfully added")
+    alert('Questions successfully added');
   }
 
   ngOnInit() {

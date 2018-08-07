@@ -1,27 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'
+import { FormsModule } from '@angular/forms';
+
+// app
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from 'src/app/app.routing.module';
+
+// components
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { QuestionsService } from './questions/questions.service';
-import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuizComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {path: 'questions', component: QuestionsComponent},
-      {path: 'quiz', component: QuizComponent},
-      {path: 'App', component: AppComponent},
-      {path: '', redirectTo: 'App', pathMatch: 'full'},
-      {path: '**', redirectTo: 'App', pathMatch: 'full'}
-    ]),
+    // importing app routing
+    AppRoutingModule,
     FormsModule
   ],
   providers: [QuestionsService],
